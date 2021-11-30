@@ -101,6 +101,10 @@ type attackOpts struct {
 	unixSocket     string
 }
 
+func AttackNow(opts *attackOpts) (err error) {
+	return attack(opts)
+}
+
 // attack validates the attack arguments, sets up the
 // required resources, launches the attack and writes the results
 func attack(opts *attackOpts) (err error) {
